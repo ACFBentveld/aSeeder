@@ -109,7 +109,7 @@ class MakeSeed extends Command
      */
     private function appendToDatabaseFile()
     {
-        if(!\File::exists(base_path().'/'.$this->path)){
+        if(!\File::exists(base_path().'/'.$this->path.'/DatabaseSeeder.php')){
            return $this->createDatabaseFile();
         }
         $file = \File::get($this->stubFiles . '/DatabaseSeeder.stub');
