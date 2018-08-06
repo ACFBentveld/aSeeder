@@ -6,7 +6,6 @@
     ],
     "homepage": "https://github.com/ACFBentveld/aSeeder",
     "license": "MIT",
-    "version": "1.0.2",
     "authors": [
         {
             "name": "Wim Pruiksma",
@@ -45,7 +44,7 @@
                 "ACFBentveld\\ASeeder\\ASeederServiceProvider"
             ],
             "aliases": {
-                "Shop": "ACFBentveld\\ASeeder\\ASeederFacade"
+                "ASeeder": "ACFBentveld\\ASeeder\\ASeederFacade"
             }
         }
     }
