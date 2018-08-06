@@ -1,5 +1,7 @@
 # aSeeder
 Export your complete database to laravel seeder files. No need to specify any extra commands.
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/acfbentveld/aseeder.svg?style=flat-square)](https://packagist.org/packages/acfbentveld/aseeder)
+[![Total Downloads](https://img.shields.io/packagist/dt/acfbentveld/aseeder.svg?style=flat-square)](https://packagist.org/packages/acfbentveld/aseeder)
 
 ## Install 
 ```
