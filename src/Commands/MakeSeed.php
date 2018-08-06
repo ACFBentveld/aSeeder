@@ -73,7 +73,7 @@ class MakeSeed extends Command
             $this->info('all done!');
             return false;
         }
-        if ($this->confirm("Create migration for all tables?")) {
+        if ($this->confirm("Create seeds for all tables?")) {
             $this->allTables = true;
         }
         if (!$this->confirm("Truncate before seeding?")) {
