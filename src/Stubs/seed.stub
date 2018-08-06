@@ -1,0 +1,25 @@
+<?php
+
+use Illuminate\Database\Seeder;
+
+class %TABLENAME%TableSeeder extends Seeder
+{
+
+    /**
+     * Auto generated seed file
+     *
+     * @return void
+     */
+    public function run()
+    {
+
+
+        %TRUNCATE%
+
+        \DB::table('%TABLE%')->insert(array(
+%ROWS%
+        ));
+
+
+    }
+}

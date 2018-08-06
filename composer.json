@@ -1,12 +1,12 @@
 {
-    "name": "acfbentveld/shop",
-    "description": "A laravel webshop",
+    "name": "acfbentveld/aseeder",
+    "description": "A laravel database exporter to seed files",
     "keywords": [
-        "shop", "webshop", "ecommerce","laravel"
+        "seed", "artisan", "laravel"
     ],
-    "homepage": "https://github.com/ACFBentveld/Shop",
+    "homepage": "https://github.com/ACFBentveld/aSeeder",
     "license": "MIT",
-    "version": "0.0.21",
+    "version": "1.0.0",
     "authors": [
         {
             "name": "Wim Pruiksma",
@@ -16,19 +16,19 @@
         }
     ],
     "require": {
-        "php": "^7.1"
+        "laravel/framework": "5.*"
     },
     "require-dev": {
         
     },
     "autoload": {
         "psr-4": {
-            "ACFBentveld\\Shop\\": "src"
+            "ACFBentveld\\ASeeder\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "ACFBentveld\\Shop\\Tests\\": "tests"
+            "ACFBentveld\\ASeeder\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -42,10 +42,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "ACFBentveld\\Shop\\ShopServiceProvider"
+                "ACFBentveld\\ASeeder\\ASeederServiceProvider"
             ],
             "aliases": {
-                "Shop": "ACFBentveld\\Shop\\ShopFacade"
+                "Shop": "ACFBentveld\\ASeeder\\ASeederFacade"
             }
         }
     }

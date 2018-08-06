@@ -11,7 +11,11 @@ class ASeederServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        
+        if ($this->app->runningInConsole()) {
+            $this->commands([
+                \ACFBentveld\ASeeder\Commands\MakeSeed::class
+            ]);
+        }
     }
 
     /**
