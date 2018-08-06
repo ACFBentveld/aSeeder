@@ -1,0 +1,52 @@
+{
+    "name": "acfbentveld/aseeder",
+    "description": "A laravel database exporter to seed files",
+    "keywords": [
+        "seed", "artisan", "laravel"
+    ],
+    "homepage": "https://github.com/ACFBentveld/aSeeder",
+    "license": "MIT",
+    "version": "1.0.0",
+    "authors": [
+        {
+            "name": "Wim Pruiksma",
+            "email": "wim@acfbentveld.nl",
+            "homepage": "https://acfbentveld.nl/",
+            "role": "Lead developer"
+        }
+    ],
+    "require": {
+        "laravel/framework": "5.*"
+    },
+    "require-dev": {
+        
+    },
+    "autoload": {
+        "psr-4": {
+            "ACFBentveld\\ASeeder\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "ACFBentveld\\ASeeder\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "ACFBentveld\\ASeeder\\ASeederServiceProvider"
+            ],
+            "aliases": {
+                "Shop": "ACFBentveld\\ASeeder\\ASeederFacade"
+            }
+        }
+    }
+}
