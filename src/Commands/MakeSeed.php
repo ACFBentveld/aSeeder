@@ -151,16 +151,19 @@ class MakeSeed extends Command
     }
 
     /**
-     * Create vlaue input for seed
+     * Create value input for seed
      *
-     * @param void $value
-     * @return void
+     * @param mixed $value
+     * @return string
      */
     private function createValue($value)
     {
         if(is_numeric($value)){
             return $value;
+        } else if(is_null($value)) {
+            return 'null';
         }
+
         return "'".addslashes($value)."'";
     }
 
