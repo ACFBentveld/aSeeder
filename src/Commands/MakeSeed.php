@@ -3,7 +3,7 @@
 namespace ACFBentveld\ASeeder\Commands;
 
 use Illuminate\Console\Command;
-use Illuminate\Support\Facades\Schema;
+use Schema;
 use DB;
 
 class MakeSeed extends Command
@@ -196,14 +196,16 @@ class MakeSeed extends Command
         $run = [];
         $tables = DB::select('SHOW TABLES');
         foreach($tables as $table){
+            $tableName = 'Tables_in_'.env('DB_DATABASE');
             if ($this->allTables){
-                $run[] = $table->Tables_in_cms;
+                $run[] = $table->{$tableName};
             }else{
-                if ($this->confirm("Create migration for ".$table->Tables_in_cms)) {
-                    $run[] = $table->Tables_in_cms;
+                if ($this->confirm("Create migration for ".$tableName)) {
+                    $run[] = $table->{$tableName};
                 }
             }
         }
+        
         return $run;
     }
 
@@ -235,12 +237,6 @@ class MakeSeed extends Command
     public function replace_string_between($string, $with, $replace){
         $content = str_replace($replace, $with, $string);
         return $content;
-//        $string = ' ' . $string;
-//        $ini = strpos($string, $start);
-//        if ($ini == 0) return '';
-//        $ini += strlen($start);
-//        $len = strpos($string, $end, $ini) - $ini;
-//        return substr($string, $ini, $len);
     }
 
 }
