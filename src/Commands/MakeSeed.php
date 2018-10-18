@@ -158,7 +158,7 @@ class MakeSeed extends Command
      */
     private function createValue($value)
     {
-        if(is_numeric($value)){
+        if(is_numeric($value) && !substr( $value, 0, 1 ) == 0){
             return $value;
         } else if(is_null($value)) {
             return 'null';
