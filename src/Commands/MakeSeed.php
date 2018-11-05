@@ -200,7 +200,7 @@ class MakeSeed extends Command
             if ($this->allTables){
                 $run[] = $table->{$tableName};
             }else{
-                if ($this->confirm("Create migration for ".$tableName)) {
+                if ($this->confirm("Create seed for ".$table->{$tableName})) {
                     $run[] = $table->{$tableName};
                 }
             }
